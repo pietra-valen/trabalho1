@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<title>currículo - início</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+
+html { scroll-behavior: smooth; }
+
+body {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2% 0;
+
+    font-family: Arial, sans-serif;
+    color: #444;
+    line-height: 1.5;
+
+    background: url("imagens/fundo.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* menu */
+.topo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+}
+
+.container-topo {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 80px;
+    transition: 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.titulo-logo {
+    font-family: 'Orbitron';
+    letter-spacing: 2px;
+    color: white;
+}
+
+/* menu */
+.navegacao a {
+    margin: 0 15px;
+    color: #bbb;
+    text-decoration: none;
+    font-family: 'Orbitron';
+    font-size: 13px;
+    position: relative;
+    transition: 0.3s;
+}
+
+.navegacao a:hover {
+    color: white;
+}
+
+.navegacao a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: white;
+    transition: 0.3s;
+}
+
+.navegacao a:hover::after {
+    width: 100%;
+}
+
+/* linha topo */
+.linha {
+    position: fixed;
+    top: 70px;
+    width: 100%;
+    height: 1px;
+    overflow: hidden;
+}
+
+.linha::before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, white, transparent);
+    animation: mover 3s linear infinite;
+}
+
+@keyframes mover {
+    0% { left: -200px; }
+    100% { left: 100%; }
+}
+
+/* fundo */
+.fundo {
+    background: rgba(0,0,0,0.75);
+    padding: 160px 0 80px 0;
+}
+
+main {
+    width: 75%;
+    margin: auto;
+    background: transparent;
+}
+
+/* apresentação */
+.apresentacao {
+    text-align: center;
+    padding-bottom: 30px;
+    animation: aparecer 1s ease;
+    border-top: none; 
+}
+
+.foto {
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    border: 2px solid #aaa;
+    transition: 0.3s;
+}
+
+.foto:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px white;
+}
+
+h1, h2 {
+    font-family: 'Orbitron';
+    color: white;
+}
+
+/* seções */
+section {
+    margin-top: 0px;
+    padding-bottom: 15px;
+    border-top: solid 1px gray;
+    animation: aparecer 1s ease;
+    scroll-margin-top: 100px;
+}
+
+/* texto */
+section p {
+    max-width: 700px;
+    margin: 15px 0;
+    line-height: 1.7;
+}
+
+ul {
+    line-height: 1.9;
+}
+
+/* botão */
+.botao {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    border: 1px solid #aaa;
+    color: #ddd;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background: white;
+    color: black;
+    box-shadow: 0 0 10px white;
+}
+
+/* links */
+a { color: #ccc; }
+a:hover { color: white; }
+
+/* animação */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="topo">
+    <div class="container-topo">
+
+        <div class="logo-area">
+            <img src="imagens/logo-starwars.png" class="logo">
+            <span class="titulo-logo">R2D2 SYSTEMS</span>
+        </div>
+
+        <div class="navegacao">
+            <a href="#perfil">Perfil</a>
+            <a href="#competencias">Competências</a>
+            <a href="#formacao">Formação</a>
+            <a href="#experiencia">Experiência</a>
+            <a href="#contato">Contato</a>
+        </div>
+
+    </div>
+</div>
+
+<div class="linha"></div>
+
+<div class="fundo">
+<main>
+
+<section class="apresentacao">
+    <img src="imagens/r2d2.png" class="foto">
+    <h1>R2D2</h1>
+</section>
+
+<section id="perfil">
+    <h2>Perfil</h2>
+    <p>Unidade robótica especializada em suporte técnico, comunicação e análise de sistemas.</p>
+    <p>Projetado para atuar em ambientes críticos com alta eficiência e precisão.</p>
+</section>
+
+<section id="competencias">
+    <h2>Competências</h2>
+    <ul>
+        <li>Comunicação digital</li>
+        <li>Análise de sistemas</li>
+        <li>Manutenção técnica</li>
+        <li>Resolução de problemas</li>
+        <li>Segurança de dados</li>
+    </ul>
+</section>
+
+<section id="formacao">
+    <h2>Formação</h2>
+    <p>IA - <a href="https://www.mit.edu">MIT</a></p>
+    <p>Engenharia - <a href="https://www.stanford.edu">Stanford</a></p>
+</section>
+
+<section id="experiencia">
+    <h2>Experiência</h2>
+    <ul>
+        <li>Aliança Rebelde
+            <ol>
+                <li>Suporte técnico</li>
+                <li>Operações</li>
+            </ol>
+        </li>
+    </ul>
+
+    <a href="experiencia.html" class="botao">Ver mais</a>
+</section>
+
+<section id="contato">
+    <h2>Contato</h2>
+    <p><img src="imagens/local.png" width="30"> Base Rebelde</p>
+    <p><img src="imagens/telefone.png" width="30"> <a href="tel:+55000000000">+55 00000-0000</a></p>
+    <p><img src="imagens/email.png" width="30"> <a href="mailto:r2d2@galaxia.com">r2d2@galaxia.com</a></p>
+</section>
+
+</main>
+</div>
+
+</body>
+</html>
